@@ -38,7 +38,8 @@
       "Tests/SwiftAIAlibabaTests/AlibabaProviderLanguageAndVideoTests.swift",
       "Tests/SwiftAIAlibabaTests/AlibabaProviderTests.swift",
       "Tests/SwiftAIAlibabaTests/FixtureDownloadTransport.swift",
-      "Tests/SwiftAIAlibabaTests/TestSupport.swift"
+      "Tests/SwiftAIAlibabaTests/TestSupport.swift",
+      "Tests/SwiftAIAlibabaTests/Weekly20261101CredentialsTests.swift"
     ],
     "resources": []
   },
