@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-alibaba",
-  "version": "1.1.1",
-  "releaseID": "weekly-upstream-20261108",
+  "version": "1.1.2",
+  "releaseID": "weekly-upstream-20261114",
   "source": {
-    "commit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
-    "baseCommit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
+    "commit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
+    "baseCommit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
     "workingTree": false,
-    "inputsSHA256": "987359720075cb67dd8bc45bdc049aee4c5d5a42b67a7eb148e697ce5d18bd77"
+    "inputsSHA256": "63e472c0fe891cb7636d225e1c6467e4761dc3721be68081f2afa9f0b656bb29"
   },
   "dependencies": [
     {
@@ -17,22 +17,22 @@
   ],
   "changes": [
     {
-      "id": "weekly-upstream-20261108",
-      "notes": "Published catalog extraction preserves Qwen JSON-schema prefixes, preserved-thinking exact IDs, embedding limit10/parallel false, and legacy/Wan2.7/Wan3 routing. These native policies already exist; no wire parser/options/errors/stream change in this delta. Internal catalogs are not exported from the provider entry point. Advance reviewed provenance and matching request user-agent only. Reviewed published upstream delta: @ai-sdk/alibaba 2.0.80 to 2.0.85. Validation passed: node Scripts/test-packages.mjs (all 52 owning packages plus the complete local facade; 3,965 reported tests and 33 explicit live skips); node Scripts/sdk.mjs dev test; node Scripts/sdk.mjs generate --check; node --test Scripts/tests/*.test.cjs (27 passed); core/provider isolation and version resolution; 52 deterministic package exports, 106 catalog consumers and four additional exact retained-minimum graphs; docs-site install/check/build (100 pages); git diff --check. No paid live-service calls were run. The publication pipeline requires successful Swift 6.3.3 CI at the exact canonical source before publishing.",
-      "compatibility": "Patch release for behavior/header corrections without new required owning API. Existing call sites and exact old selectors are retained. Direct minimums change only for concrete API use or required inherited behavior. Version-delta review does not establish full-package parity or live-service acceptance."
+      "id": "weekly-upstream-20261114",
+      "notes": "Refresh the versioned request identity while retaining the current native request, response and stream behavior. Internal upstream model-catalog reorganizations preserve the existing native policies. Reviewed npm delta: @ai-sdk/alibaba 2.0.85 to 2.0.90. Validation: `node Scripts/test-packages.mjs` passed all 52 owning suites and 1731 facade tests; tooling 27/27, generation/isolation checks, standalone exports and 106 minimum/latest consumers, documentation check and 101-page build passed. Publication requires green exact-source Swift 6.3.3 CI. Paid/live verification and full-package parity are not claimed.",
+      "compatibility": "Compatible behavior/header correction. Original public selectors are preserved. npm baselines and Swift SemVer are independent; this reviewed delta does not establish full-package or live-service parity."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-alibaba",
   "upstream": [
     {
       "name": "@ai-sdk/alibaba",
-      "reviewedVersion": "2.0.85",
+      "reviewedVersion": "2.0.90",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.alibaba`, `AlibabaLanguageModel`, `AlibabaEmbeddingModel`, `AlibabaProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json",
+      "evidence": "`AIProviders.alibaba`, `AlibabaLanguageModel`, `AlibabaEmbeddingModel`, `AlibabaProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-68eVWQCTozBYknLCz8PPY9sHfmWC+L4SAR2u04g8Dgak7Be40tccAijz675pdOAlDfXrBVYCPlk4MLxomCP+KQ==",
-      "sourceRef": "npm:@ai-sdk/alibaba@2.0.85",
-      "testRef": "0f3a85f92d1ce06ccde01d662407ef83e097a712",
+      "archiveIntegrity": "sha512-5ogjM08UXY4pnjDX9WgATTRw1uMq0ySMyeBFGeciGfVwyP4GFPOHoNU2IUGNXmWeiqaLJ07tuOlzDiB7Ozmf3Q==",
+      "sourceRef": "npm:@ai-sdk/alibaba@2.0.90",
+      "testRef": "8bc7652cdb13fc84722666eb93f45acd0d131eee",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "EmbeddingModelV4",
@@ -40,7 +40,7 @@
         "ProviderV4",
         "VideoModelV4"
       ],
-      "contractReview": "2026-11-08: published declarations/source and exact matching-release changed tests reviewed; native implementations, per-file dispositions and broader retained gaps are recorded in Docs/WeeklyUpstreamAudit20261108.json. Reviewed delta is not full-package or live-service parity."
+      "contractReview": "2026-11-14: verified published source/declarations and exact matching-release changed tests reviewed separately; native ports, per-file dispositions and retained gaps are recorded in Docs/WeeklyUpstreamAudit20261114.json. Delta review is not full-package or live-service parity."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -59,7 +59,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-alibaba/Porting/map.json",
-      "sha256": "fee7bdd848f3e1da926192228fef59ad637656650ca8a582a5550cbf3b95ba73"
+      "sha256": "d366aa5582158064dd800eb661c107e31c652d90435f16fcd441595e774ae479"
     },
     {
       "canonicalPath": "Packages/swift-ai-alibaba/README.md",
@@ -83,7 +83,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-alibaba/Sources/SwiftAIAlibaba/AlibabaProvider.swift",
-      "sha256": "eb77c223db1d7bab029c0ea5df86c86cdc039b35ef32b1d27e17a4f50bd66ad2"
+      "sha256": "44537c2b9556169c5da31c1094025b6a269cf2126242f422cf423897e04d4048"
     },
     {
       "canonicalPath": "Packages/swift-ai-alibaba/Sources/SwiftAIAlibaba/AlibabaRequestPreparation.swift",
@@ -103,7 +103,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-alibaba/Tests/SwiftAIAlibabaTests/AlibabaProviderTests.swift",
-      "sha256": "705c8bb6536590515722c4993f1d309cbd0ebcd0016052c606e4084860a65f1e"
+      "sha256": "079648e88ef3f7ec0101cce6770f3e0f6ee969d2a1e7f5a17e7a0a581dc317e4"
     },
     {
       "canonicalPath": "Packages/swift-ai-alibaba/Tests/SwiftAIAlibabaTests/FixtureDownloadTransport.swift",
