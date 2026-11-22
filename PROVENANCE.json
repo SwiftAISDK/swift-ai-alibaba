@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-alibaba",
-  "version": "1.2.0",
-  "releaseID": "upstream-parity-20261116",
+  "version": "1.2.1",
+  "releaseID": "weekly-upstream-20261122",
   "source": {
-    "commit": "1c457dea36be42376a6853aecd5c48ffc4942178",
-    "baseCommit": "1c457dea36be42376a6853aecd5c48ffc4942178",
+    "commit": "73e28c7d4106338c3030bc36700c5922aeb2ebd9",
+    "baseCommit": "73e28c7d4106338c3030bc36700c5922aeb2ebd9",
     "workingTree": false,
-    "inputsSHA256": "d7b8f52add7828d7e9ed20418fe072e7db03e75483a168bb7f5c34e9d2a04a13"
+    "inputsSHA256": "5b64cfae284ecf9a081f1c08d5b5dff83915b3c57b62669a3408e51a52961cb5"
   },
   "dependencies": [
     {
@@ -17,22 +17,22 @@
   ],
   "changes": [
     {
-      "id": "upstream-parity-20261116",
-      "notes": "Chat request conversion and reasoning IDs match upstream; new provider settings are available.",
-      "compatibility": "Source-compatible; changes are additive. Request bodies, results, warnings and errors change to match the reviewed upstream package."
+      "id": "weekly-upstream-20261122",
+      "notes": "Align the provider request identity with @ai-sdk/alibaba 2.0.93 after comparing source, declarations and matching-release tests against 2.0.91. Offline validation passed: node Scripts/test-packages.mjs (56 packages, 3672 owning tests and 1760 compatibility tests), generation, tooling, isolation, and version selection. See Docs/Archive/WeeklyUpstreamAudit20261122.md for retained gaps. Paid provider calls were skipped.",
+      "compatibility": "Source-compatible request-header update."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-alibaba",
   "upstream": [
     {
       "name": "@ai-sdk/alibaba",
-      "reviewedVersion": "2.0.91",
+      "reviewedVersion": "2.0.93",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.alibaba`, `AlibabaLanguageModel`, `AlibabaEmbeddingModel`, `AlibabaProviderTests.swift`; 2026-11-01 delta: Docs/Archive/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/Archive/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/Archive/WeeklyUpstreamAudit20261114.json; 2026-11-15 delta: Docs/Archive/WeeklyUpstreamAudit20261115.json",
+      "evidence": "`AIProviders.alibaba`, `AlibabaLanguageModel`, `AlibabaEmbeddingModel`, `AlibabaProviderTests.swift`; 2026-11-01 delta: Docs/Archive/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/Archive/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/Archive/WeeklyUpstreamAudit20261114.json; 2026-11-15 delta: Docs/Archive/WeeklyUpstreamAudit20261115.json; 2026-11-22 delta: Docs/Archive/WeeklyUpstreamAudit20261122.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-JNMAxdVcv8KWMEZYHFxK6TXh9rPIg6wTPa0RQHJpmkps6EeNNQMfY/HNbZtf7tQ2UPXadbNitiHOPayinf3+Kw==",
-      "sourceRef": "npm:@ai-sdk/alibaba@2.0.91",
-      "testRef": "0e8e0543aeda7d4dd4ce6eade0d5b7d5a43644c1",
+      "archiveIntegrity": "sha512-hZA4C8O7yKt4MWbC32ndrnpQGEJDoxGemSlWl+DB4TXiU2q0UIPi4tBV3ESaFCTUOmk+BQbxumOmqgjvFOtf6w==",
+      "sourceRef": "npm:@ai-sdk/alibaba@2.0.93",
+      "testRef": "3dad57f204c7332178d28c3467c7311875b66a3e",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "EmbeddingModelV4",
@@ -40,7 +40,7 @@
         "ProviderV4",
         "VideoModelV4"
       ],
-      "contractReview": "2026-11-15: published source/declarations and exact matching-release tests reviewed separately. Native delta scenarios, per-file dispositions, unchanged-catalog evidence and explicit remaining gaps are recorded in Docs/Archive/WeeklyUpstreamAudit20261115.json. Required checks remain a separate gate; no full-package/live-service parity claim."
+      "contractReview": "2026-11-22: reviewed the published source and declarations and the matching-release test diffs. Native evidence and explicitly retained coverage gaps are in Docs/Archive/WeeklyUpstreamAudit20261122.json."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -83,7 +83,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-alibaba/Sources/SwiftAIAlibaba/AlibabaProvider.swift",
-      "sha256": "ed78f2878ef7adf3c0ea6b5d7932dac9643f27ec94043856c8d2d498d84b185c"
+      "sha256": "643ee4404b4aa151cb9d4966ede65b89fd1f85ca737e12d5692738fd1b421ed4"
     },
     {
       "canonicalPath": "Packages/swift-ai-alibaba/Sources/SwiftAIAlibaba/AlibabaRequestPreparation.swift",
@@ -103,7 +103,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-alibaba/Tests/SwiftAIAlibabaTests/AlibabaProviderTests.swift",
-      "sha256": "29445426d9c0813b4200338210adda2f27a0b1ca27da6150db44b5b833c55419"
+      "sha256": "f63b22a88bc3330038cc28fb6839c1d7d3d84fd57dbecc10206501a7931a0ff6"
     },
     {
       "canonicalPath": "Packages/swift-ai-alibaba/Tests/SwiftAIAlibabaTests/AlibabaUpstreamParityTests.swift",
